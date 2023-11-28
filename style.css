@@ -1,0 +1,10 @@
+html {
+  cursor: none;
+}
+.circulo {
+  background: #999;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: absolute;
+}

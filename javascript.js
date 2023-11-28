@@ -1,13 +1,20 @@
-const circulo = document.querySelector(".circulo");
+var botao = document.querySelector(".botao");
+var numero = document.querySelector(".numero");
 
-function seguir(event) {
-  var x = event.clientX;
-  var y = event.clientY;
-
-  circulo.style.top = y + "px";
-  circulo.style.left = x + "px";
-
-  console.log(circulo);
+function somar(event) {
+  var valornumero = numero.innerHTML;
+  var valornumero2 = parseFloat(valornumero);
+  var somando = valornumero2 + 1;
+  if (somando < 11) {
+    numero.textContent = somando;
+  } else {
+    console.log("Número exedido.");
+  }
 }
 
-window.addEventListener("mousemove", seguir);
+if (botao) {
+  botao.addEventListener("click", somar);
+  // console.log("teste");
+} else {
+  // console.log("não");
+}
